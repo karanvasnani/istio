@@ -20,6 +20,7 @@ import (
 	bypass "istio.io/istio/mixer/adapter/bypass"
 	circonus "istio.io/istio/mixer/adapter/circonus"
 	cloudwatch "istio.io/istio/mixer/adapter/cloudwatch"
+	cloudwatchlogs "istio.io/istio/mixer/adapter/cloudwatchlogs"
 	denier "istio.io/istio/mixer/adapter/denier"
 	dogstatsd "istio.io/istio/mixer/adapter/dogstatsd"
 	fluentd "istio.io/istio/mixer/adapter/fluentd"
@@ -44,6 +45,7 @@ func Inventory() []adptr.InfoFn {
 		bypass.GetInfo,
 		circonus.GetInfo,
 		cloudwatch.GetInfo,
+		cloudwatchlogs.GetInfo,
 		denier.GetInfo,
 		dogstatsd.GetInfo,
 		fluentd.GetInfo,
